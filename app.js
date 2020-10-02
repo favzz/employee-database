@@ -19,8 +19,10 @@ mongoose.connect(process.env.DATABASE, {
    useNewUrlParser : true,
    useUnifiedTopology: true,
    useCreateIndex : true  
-}).then(con =>{
+}).then(() =>{
    console.log('data connected')
+}).catch(err=>{
+   console.log(err)
 });
 
 app.use(bodyParser.urlencoded({extended:true}))
