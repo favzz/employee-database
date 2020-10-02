@@ -5,7 +5,7 @@ const express = require('express');
 // Routers
 //get routes starts here
 
-router.get('/', (req,res)=>{
+router.get('/', (req,res,)=>{
     Employee.find({})
        .then(employees => {
           res.render('index', {employees: employees})
